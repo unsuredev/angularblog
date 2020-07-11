@@ -1,0 +1,165 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+img {
+  height: 100px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+.cards {
+  display: flex;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+.photobanner {
+	position: relative;
+	height: 233px;
+	margin-bottom: 30px;
+	display: flex;
+	width: 100%;
+}
+
+.photobanner img {
+  margin: 0px 25px;
+  box-shadow: 2px 2px 8px #8a8a8a;
+}
+
+.photobanner {
+  animation: bannermove 50s linear infinite alternate-reverse;
+}
+
+@keyframes bannermove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -2700px;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  height: 20em;
+  width: 19em;
+}
+.about ,.feature-text{
+  padding-top: 5rem;
+  margin: 30px auto;
+  justify-content: center;
+  text-align: center;
+
+
+}
+.about h2{
+  font-size: 55px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #9ACD32;
+}
+.about h5{
+  font-weight: 200;
+  
+}
+.about  h5{
+  text-align: justify;
+  line-height: 1.5em;
+  padding: 20px;
+  color: #46344E;
+
+
+}
+
+#mobile p{
+  color: #46344E;
+}
+
+p{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+svg {
+
+  -webkit-font-smoothing: antialiased;
+  width: 100px;
+}
+
+svg:hover #rect {
+  stroke-dasharray: 1700, 1700;
+  -webkit-animation: dash 0.5s linear;
+}
+
+@-webkit-keyframes dash {
+  from { stroke-dasharray: 0, 1700;}
+  to {stroke-dasharray: 1700, 1700;}
+}
+
+
+#rect {
+  stroke-dasharray: 0, 1700;
+}
+.mypic{
+  padding-top: 5rem;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.feature-image{
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+#circle{
+  stroke: #9ACD32;
+}
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#b9bbb6;
+  height: 1px;
+}

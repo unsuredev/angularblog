@@ -1,0 +1,80 @@
+<nav class="na">
+  <div>
+    <a href="/" class="justify-content-center">
+      <img src="../../../assets/img/logoIcon/finallogo .png" alt="logo" />
+    </a>
+  </div>
+
+  <ul class="text-white">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active-link" routerLink="posts">
+        <i class="material-icons">payment</i>
+        <br />Posts</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active-link" routerLink="/about">
+        <i class="material-icons">face</i>
+        <br />
+        About Me
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="courses" routerLinkActive="active-link">
+        <i class="material-icons">web</i>
+        <br />Courses</a
+      >
+    </li>
+    <li
+      class="nav-item"
+      *ngIf="user$ | async as user; else loginIcon"
+      matTooltip="Write a Post🐱"
+    >
+      <a
+        class="nav-link"
+        mat-button
+        routerLink="/create"
+        routerLinkActive="active-link"
+      >
+        <i class="material-icons">edit</i>
+        <br />
+        New Post</a
+      >
+    </li>
+
+    <li>
+      <mat-toolbar>
+        <ng-container
+          *ngIf="user$ | async as user; else loginIcon"
+          style="color: aliceblue !important;"
+        >
+          <!-- <button mat-icon-button routerLink="/create" matTooltip="Write a Post🐱" style="color: aliceblue !important">
+
+            <mat-icon aria-hidden="false" aria-label="Write a post 🐱" style="color: aliceblue !important">
+              edit
+            </mat-icon>
+
+          </button> -->
+
+          <span class="spacer"></span>
+
+          <app-profile-card [user]="user" (logoutClick)="logout()">
+          </app-profile-card>
+        </ng-container>
+        <ng-template #loginIcon>
+          <button mat-icon-button (click)="login()" matTooltip="Login">
+            <mat-icon
+              aria-hidden="false"
+              style="color: aliceblue !important;"
+              aria-label="Login"
+            >
+              person_pin
+            </mat-icon>
+          </button>
+        </ng-template>
+      </mat-toolbar>
+    </li>
+  </ul>
+</nav>

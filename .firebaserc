@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angblog-388a0": {
+      "hosting": {
+        "angblog": [
+          "angblog-388a0"
+        ]
+      }
+    }
+  }
+}

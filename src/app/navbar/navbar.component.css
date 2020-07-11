@@ -1,0 +1,49 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.active-link {
+  color: #faed26 !important;
+}
+
+* {
+  background-color: #46344e;
+}
+.nav-item a {
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+li {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: inline-block;
+  padding: 1em 3em;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  transition-property: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  font-size: 16px;
+}

@@ -1,0 +1,16 @@
+<div class="card-deck">
+  <div class="card" *ngFor="let post of posts">
+    <img class="card-img-top img-fluid" [src]="post.imagePath" [alt]="post.title">
+    <div class="card-body">
+      <span><a [routerLink]="['/post', post.title]">
+          <p class="card-title">{{ post.title }}</p>
+          <p>{{post.content.substring(3, 100)}}...</p>
+        </a></span>
+
+
+      <p>{{post.date | date :'fullDate'}}</p>
+    </div>
+  </div>
+
+
+</div>

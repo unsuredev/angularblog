@@ -1,0 +1,38 @@
+
+
+
+ <div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Post Title</th> 
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+
+
+
+
+        <tbody>
+          <tr>
+            <th scope="row">3</th>
+            <div *ngFor="let post of posts">
+              <td>    {{ post.title }}</td>
+              <td>Admin</td>
+            
+              <td>
+                <a mat-button color="primary" [routerLink]="['/edit', post.id]"><i class="fas fa-edit"></i></a>
+                <a mat-button color="primary"  (click)="onPause(post.id)"><i class="far fa-eye"></i></a>
+                <button mat-button color="warn" (click)="onDelete(post.id)"><i class="far fa-trash-alt"></i></button>
+              </td>
+            </div>
+          </tr>
+        </tbody>
+      <p class="info-text mat-body-1" *ngIf="posts.length <= 0 ">No posts added yet!</p>
+      </table>
+    </div>
+  </div>
+</div>
